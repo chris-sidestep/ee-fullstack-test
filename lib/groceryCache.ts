@@ -55,6 +55,9 @@ export default class GroceryCache {
                 return this.defaultValue
             }
             return parsed 
-        } 
+        }
+        
+        return this.defaultValue
+         
     }
 }

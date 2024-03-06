@@ -17,8 +17,10 @@ export default async function handler(
 ) {
   
   if(req.method == "GET"){
+    console.log("GTTING")
     const data = await groceryService.getGroceryList()
-    res.status(200).json(data)
+    console.log("DATA:"+JSON.stringify(data))
+    return res.status(200).json(data)
   }
   else if(req.method == "POST"){   
     const text = req.body.item;
